@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="menu_add">Añadir nota</string>
+    <string name="menu_clear">Vaciar BD</string>
+    <string name="menu_help">Ayuda</string>
+    <string name="empty_list">Lista de notas vacías</string>
+    <string name="help_text">Ayuda de la aplicación de notas</string>
+    <string name="confirm_clear_title">Confirmar</string>
+    <string name="confirm_clear_text">¿Desea eliminar todas las notas?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Guardar</string>
+    <string name="back">Volver</string>
+    <string name="note_title_hint">Título</string>
+    <string name="note_category_hint">Categoría</string>
+    <string name="note_content_hint">Contenido</string>
+</resources>
