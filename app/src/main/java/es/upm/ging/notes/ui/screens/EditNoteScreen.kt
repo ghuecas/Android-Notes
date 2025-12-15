@@ -1,11 +1,9 @@
 package es.upm.ging.notes.ui.screens
 
-import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import es.upm.ging.notes.R
@@ -46,13 +44,6 @@ fun EditNoteScreen(
         }
     }
 
-    // Detección de gesto "arrastrar a la derecha"
-    val gestureModifier = Modifier.pointerInput(Unit) {
-        detectHorizontalDragGestures { change, dragAmount ->
-            if (dragAmount > 50) onBack()
-        }
-    }
-
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
         modifier = Modifier.statusBarsPadding().navigationBarsPadding()
@@ -62,7 +53,6 @@ fun EditNoteScreen(
                 .fillMaxSize()
                 .padding(padding)
                 .padding(16.dp)
-                .then(gestureModifier)
         ) {
 
             Text(text = if (noteId == null) stringResource(id = R.string.new_note) else stringResource(id = R.string.edit_note))
@@ -146,4 +136,3 @@ fun EditNoteScreen(
         }
     }
 }
-
